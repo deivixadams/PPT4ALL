@@ -1,0 +1,29 @@
+{% if user_ip %}
+    <h1>Hello word, tu ip es {{user_ip}} </h1>
+{% else %}
+    <a href="{{ url_for('index') }}">Ir a la pagina principal</a>
+{% endif %}
+
+<hr>
+{% for i in todos %}
+    <li><strong>{{ i }}</strong></li>
+{% endfor %}
+<hr>
+
+{{ cadena }}
+<hr>
+{{ cadena | capitalize }}
+<hr>
+{{ cadena | title }}
+<hr>
+{{ cadena | length }}
+
+<hr>
+<button onclick="alert('hola')">Presioname</button>
+
+<hr>
+<button onclick="alert('hola')" style="background-color: green; color: white; text-align: center;">Presioname</button>
+
+un nuevo boton que al presionar vaya al index
+<button onclick="location.href='{{ url_for('index') }}'">Ir a la pagina principal</button>
+
